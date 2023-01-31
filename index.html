@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[TECH I.S.] TailwindCSS Event</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body x-data="example">
+    <main class="w-screen h-screen grid place-content-center bg-main-black">
+      <div class="container mx-auto">
+        <div
+          class="w-full h-full p-10 rounded-[20px] border-8 border-solid border-main-black _shadow-container text-center"
+        >
+          <h2 class=" text-xxl font-medium tracking-widest text-white">CONTACT</h2>
+          <div class="w-full h-full mt-6">
+            <form
+              action=""
+              method="POST"
+              class="w-full h-full"
+            >
+              <div class="grid grid-cols-1 justify-center justify-items-center items-center flex-col gap-6">
+
+                <div
+                  x-data="{ active: false }"
+                  class="relative w-[300px] h-auto"
+                >
+                  <input
+                    @click="active = true"
+                    @blur="active = false"
+                    type="text"
+                    required="required"
+                    class="
+                      py-3 pr-2.5 pl-12
+                      w-full
+                      bg-main-black
+                      border border-solid border-black border-opacity-10
+                      text-white
+                      font-light
+                      rounded-full
+                      text-md
+                      _shadow-input
+                      duration-[500ms]
+                      outline-none"
+                  >
+                  <i
+                    class="fa-solid fa-user absolute top-[15px] left-4 w-[25px] px-0.5 pr-2 text-main-light border-r border-solid border-main-light duration-[500ms]"
+                  ></i>
+                  <span
+                    class="
+                      absolute
+                      left-0
+                      pointer-events-none
+                      font-light
+                      tracking-wider
+                      text-opacity-50
+                      transition-all duration-300 ease-in-out
+                      "
+
+                    :class="active ? ' text-main-light translate-x-[25px] -translate-y-3.5 text-xs py-1 px-2.5 rounded-full':'text-gray translate-x-0 translate-y-0 text-md py-3 pr-2.5 pl-12 rounded-none'"
+                    >name</span>
+                </div>
+
+                <div
+                  x-data="{ active: false }"
+                  class="relative w-[300px] h-auto"
+                >
+                  <input
+                    @click="active = true"
+                    @blur="active = false"
+                    type="text"
+                    required="required"
+                    class="
+                      py-3 pr-2.5 pl-12
+                      w-full
+                      bg-main-black
+                      border border-solid border-black border-opacity-10
+                      text-white
+                      font-light
+                      rounded-full
+                      text-md
+                      _shadow-input
+                      duration-[500ms]
+                      outline-none"
+                  >
+                  <i
+                    class="fa-solid fa-envelope absolute top-[15px] left-4 w-[25px] px-0.5 pr-2 text-main-light border-r border-solid border-main-light duration-[500ms]"
+                  ></i>
+                  <span
+                    class="
+                      absolute
+                      left-0
+                      pointer-events-none
+                      font-light
+                      tracking-wider
+                      text-opacity-50
+                      transition-all duration-300 ease-in-out
+                      "
+
+                    :class="active ? ' text-main-light translate-x-[25px] -translate-y-3.5 text-xs py-1 px-2.5 rounded-full':'text-gray translate-x-0 translate-y-0 text-md py-3 pr-2.5 pl-12 rounded-none'"
+                    >email</span>
+                </div>
+
+                <div
+                  x-data="{ active: false }"
+                  class="relative w-[300px] h-auto"
+                >
+                  <input
+                    @click="active = true"
+                    @blur="active = false"
+                    type="text"
+                    required="required"
+                    class="
+                      py-3 pr-2.5 pl-12
+                      w-full
+                      bg-main-black
+                      border border-solid border-black border-opacity-10
+                      text-white
+                      font-light
+                      rounded-full
+                      text-md
+                      _shadow-input
+                      duration-[500ms]
+                      outline-none"
+                  >
+                  <i
+                    class="fa-solid fa-phone absolute top-[15px] left-4 w-[25px] px-0.5 pr-2 text-main-light border-r border-solid border-main-light duration-[500ms]"
+                  ></i>
+                  <span
+                    class="
+                      absolute
+                      left-0
+                      pointer-events-none
+                      font-light
+                      tracking-wider
+                      text-opacity-50
+                      transition-all duration-300 ease-in-out
+                      "
+
+                    :class="active ? ' text-main-light translate-x-[25px] -translate-y-3.5 text-xs py-1 px-2.5 rounded-full':'text-gray translate-x-0 translate-y-0 text-md py-3 pr-2.5 pl-12 rounded-none'"
+                    >phone</span>
+                </div>
+              </div>
+              <input type="button" value="send" class="button">
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/src/scripts/main.ts"></script>
+  </body>
+</html>
